@@ -1,16 +1,10 @@
 import telebot
-from token import TOKEN
+from token import keys, TOKEN
 from extensions import ConvertionException, CryptoConverter
 
-TOKEN = "5640808594:AAGTPLY0YipY5aNj_PorCJn6oQ7hD-heYbs"
 
 bot = telebot.TeleBot(TOKEN)
 
-keys = {
-    'доллар': 'USD',
-    'евро': 'EUR',
-    'рубль': 'RUB'
-}
 
 @bot.message_handler(commands = ['start'])
 def handler_start(message: telebot.types.Message):
